@@ -6,18 +6,23 @@ import "forge-std/Test.sol";
 //import {console} from "forge-std/console.sol";
 
 import {SomeNFT} from "../src/SomeNFT.sol";
+import {UUPSProxy} from "../src/UpgradeUUPS.sol";
 
 contract NumberTest is Test {
     //Counter public counter;
 
-    SomeNFT nft;
+    SomeNFT implementationNftV1;
+    UUPSProxy proxy;
+    SomeNFT someNFT;
 
     function setUp() public {
-        nft = new SomeNFT();
-        nft.initialize();
+        implementationNftV1 = new SomeNFT();
+        proxy = new UUPSProxy(address(implementationNftV1), "");
+        someNFT = SomeNFT(address(proxy));
+        someNFT.initialize();
     }
 
     function testName() public {
-        assertEq(nft.name(), "SomeNFT");
+        assertEq(someNFT.name(), "SomeNFT");
     }
 }

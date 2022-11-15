@@ -29,4 +29,8 @@ contract SomeNFT is
         override
         onlyOwner
     {}
+
+    function getImplementation() external view returns (address) {
+        return _getImplementation();
+    }
 }
