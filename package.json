@@ -1,0 +1,21 @@
+{
+  "name": "demoerc721",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/elmariachi111/demoerc721.git",
+  "author": "Stefan Adolf <stadolf@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.1.1",
+    "@openzeppelin/hardhat-upgrades": "^1.21.0",
+    "@types/chai": "^4.3.4",
+    "@types/mocha": "^9.1.0",
+    "@types/node": "^18.0.0",
+    "chai": "^4.3.7",
+    "ethers": "^5.7.2",
+    "hardhat": "^2.12.0",
+    "hardhat-preprocessor": "^0.1.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.6.4"
+  }
+}
