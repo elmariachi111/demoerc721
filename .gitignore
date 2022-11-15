@@ -9,3 +9,9 @@ out/
 
 # Dotenv file
 .env
+
+cache_hardhat
+node_modules
+artifacts/
+
+.openzeppelin/unknown-*
